@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Sistema de Tarefas</h1>
+        </div>
+        <div class="user-info">
+            <span id="usuario-nome">Bem-vindo, Usuário</span>
+            <button id="logout">Sair</button>
+        </div>
+    </header>
+
+    <main class="container-dashboard">
+        <section class="add-tarefa">
+            <form id="form-tarefa">
+                <input type="text" name="titulo" placeholder="Título da tarefa" required>
+                <input type="text" name="descricao" placeholder="Descrição (opcional)">
+                <button type="submit">Adicionar Tarefa</button>
+            </form>
+        </section>
+
+        <section class="tarefas-wrapper">
+            <ul id="lista-tarefas"></ul>
+        </section>
+    </main>
+
+    <template id="template-tarefa">
+        <li class="tarefa">
+            <div class="conteudo">
+                <h3 class="titulo"></h3>
+                <p class="descricao"></p>
+                <small class="criado-em"></small>
+            </div>
+            <div class="acoes">
+                <button class="concluir">Concluir</button>
+                <button class="editar">Editar</button>
+                <button class="apagar">Apagar</button>
+            </div>
+        </li>
+    </template>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
